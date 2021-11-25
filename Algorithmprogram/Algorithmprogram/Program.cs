@@ -9,7 +9,7 @@ namespace Algorithmprogram
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter Program number to get executed \n1. Insertion sort \n2. Exit");
+                Console.WriteLine("Enter Program number to get executed \n1. Insertion sort \n2. Bubble sort \n3. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,6 +23,15 @@ namespace Algorithmprogram
                         obj.Display(sortedarray);
                         break;
                     case 2:
+                        int[] arr = { 25, 14, 4, 7, 5 };
+                        Console.WriteLine("Unsorted array");
+                        Bubblesort bubble = new Bubblesort();
+                        bubble.Display(arr);
+                        Console.WriteLine("Sorted array");
+                        int[] sortedArray = bubble.Sort(arr);
+                        bubble.Display(sortedArray);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                     default:
