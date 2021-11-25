@@ -9,7 +9,7 @@ namespace Algorithmprogram
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter Program number to get executed \n1. Insertion sort \n2. Bubble sort \n3. Exit");
+                Console.WriteLine("Enter Program number to get executed \n1. Insertion sort \n2. Bubble sort \n3. Binary search \n4. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -32,6 +32,16 @@ namespace Algorithmprogram
                         bubble.Display(sortedArray);
                         break;
                     case 3:
+                        string[] arrword = { "hello", "hi", "how", "are", "you" };
+                        Console.WriteLine("Unsorted array");
+                        Binarysearch binary = new Binarysearch();
+                        binary.Display(arrword);
+                        Console.WriteLine("Sorted array");
+                        string[] sortedArr = binary.SortingArray(arrword);
+                        binary.Display(sortedArr);
+                        binary.Binary_search(sortedArr);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                     default:
