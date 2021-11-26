@@ -9,7 +9,7 @@ namespace Algorithmprogram
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter Program number to get executed \n1. Insertion sort \n2. Bubble sort \n3. Binary search \n4. Exit");
+                Console.WriteLine("Enter Program number to get executed \n1. Insertion sort \n2. Bubble sort \n3. Binary search \n4. Anagram Detection \n5. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -42,6 +42,10 @@ namespace Algorithmprogram
                         binary.Binary_search(sortedArr);
                         break;
                     case 4:
+                        Anagramdetection detection = new Anagramdetection();
+                        detection.CheckAnagram();
+                        break;
+                    case 5:
                         flag = false;
                         break;
                     default:
