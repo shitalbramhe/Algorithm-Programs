@@ -13,7 +13,6 @@ namespace Algorithmprogram
             int length = array.Length;
             for (int i = 0; i < length; i++)
             {
-                int count = 0;
                 for (int j = 0; j < length - 1 - i; j++)
                 {
                     if (array[j] > array[j + 1])
@@ -21,12 +20,7 @@ namespace Algorithmprogram
                         int temp = array[j];
                         array[j] = array[j + 1];
                         array[j + 1] = temp;
-                        count++;
                     }
-                }
-                if (count == 0)
-                {
-                    break;
                 }
             }
             return array;
